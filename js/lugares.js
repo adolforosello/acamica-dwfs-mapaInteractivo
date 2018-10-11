@@ -4,9 +4,16 @@ lugaresModulo = (function () {
     // Completa las direcciones ingresadas por el usuario a y establece los límites
     // con un círculo cuyo radio es de 20000 metros.
   function autocompletar () {
-    servicioAutocompletar= new google.maps.places.AutocompleteService();
-    
-    //servicioAutocompletar.getPlacePredictions();
+    var circulo = new google.maps.Circle({
+      center : posicionCentral,
+      radius : 20000
+    });
+
+    var params = { bounds: circulo.getBounds() };
+   
+    var direccion = document.getElementById("direccion");
+    new google.maps.places.Autocomplete(direccion, params)
+ 
           /* Completar la función autocompletar(): autocompleta los 4 campos de texto de la
         página (las direcciones ingresables por el usuario).
         Para esto creá un círculo con radio de 20000 metros y usalo para fijar

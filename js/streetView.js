@@ -2,6 +2,9 @@ streetViewModulo = (function () {
   var paronama // 'Visor' de StreetView
 
   function inicializar () {
+    var panoDiv=document.getElementById('pano');
+    var paronama=new google.maps.StreetViewPanorama(panoDiv,{position:posicionCentral});
+    
         /* Completar la función inicializar()  que crea un panorama
         en una posición y lo muestra en la página. */
 

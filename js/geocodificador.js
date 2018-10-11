@@ -6,7 +6,8 @@ geocodificadorModulo = (function () {
     geocodificador.geocode({address:direccion},function(result,status){
       this.dire=result[0].formatted_address;
         if(status===google.maps.GeocoderStatus.OK){
-            funcionALlamar(direccion,result[0].geometry.location,);  
+            funcionALlamar(direccion,result[0].geometry.location,); 
+            console.log(result[0].geometry.location); 
         }
          
     });  
