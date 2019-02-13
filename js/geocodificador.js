@@ -8,7 +8,8 @@ geocodificadorModulo = (function () {
         if(status===google.maps.GeocoderStatus.OK){
             funcionALlamar(direccion,result[0].geometry.location,); 
             console.log(result[0].geometry.location); 
-        }
+            console.log(result[0].geometry.location.lat());
+        } 
          
     });  
         /* Completar la función usaDireccion(dirección,funcionALlamar)

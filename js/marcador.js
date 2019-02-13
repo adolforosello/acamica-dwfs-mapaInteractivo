@@ -8,6 +8,7 @@ marcadorModulo = (function () {
     // Crea un marcador y lo muestra en el mapa
   function mostrarMiMarcador (ubicacion) {
     miMarcador = new google.maps.Marker({
+      visible : true,
       position: ubicacion,
       map:mapa,
       title:dire
